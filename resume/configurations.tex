@@ -1,0 +1,39 @@
+\documentclass[a4paper,10pt]{article} % Default font size and paper size
+\usepackage{fontspec} % For loading fonts
+\usepackage{eurosym}
+\usepackage{tabularray}
+\usepackage{multicol}
+\usepackage{paralist}
+%% IF YOU WANT TO COMPILE THIS TEX LOCALLY, COMMENT THE FOLLOWING LINES IF THE FONTS ARE NOT INSTALLED
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont{Fontin-Regular}[
+Path           = ./fonts/ ,
+Extension      = .otf , 
+BoldFont       = Fontin-Bold ,
+ItalicFont     = Fontin-Italic ,
+SmallCapsFont  = Fontin-SmallCaps ]
+%% UNTIL HERE 
+
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+\usepackage[big]{fullpage} % Margin formatting of the A4 page, an alternative to fullpage can be \usepackage{layaureo}
+\usepackage{geometry} 
+\geometry{total={170mm,257mm}}
+\usepackage{hyperref} % Required for adding links	and customizing them
+\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
+
+% blind footnote, used to add footnote that isn't numbered %
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+\pagestyle{empty} % Removes page numbering
+\font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
+\usepackage{tabularx}
